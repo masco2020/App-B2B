@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, TouchableNativeFeedback, Modal } from 'react-native';
+import { Platform, StyleSheet, TouchableNativeFeedback, Modal, Keyboard } from 'react-native';
 import styles from './Style.js';
 import { Container, Drawer, StyleProvider, Root, Text, Form, Item, Label, Input, Button, View, Icon, Picker, Header, Left, Body, Title, Right } from 'native-base';
 import IconF from 'react-native-vector-icons/dist/FontAwesome';
@@ -23,6 +23,7 @@ export default class Login extends Component {
   
   state = {
     modalVisible: false,
+    quitarPieState: this.props.quitarPieK,
   };
   setModalVisible(visible) {
     this.setState({
@@ -30,9 +31,44 @@ export default class Login extends Component {
     });
   }
 
+
+  /* keyboard */
+  componentDidMount() {
+    this.keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      this._keyboardDidShow,
+    );
+    this.keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this._keyboardDidHide,
+    );
+  }
+
+  componentWillUnmount() {
+    this.keyboardDidShowListener.remove();
+    this.keyboardDidHideListener.remove();
+  }
+  
+/*   _keyboardDidShow() {
+    this.quitarPieK = true;
+  }
+
+  _keyboardDidHide() {
+    this.quitarPieK = false;
+  } */
+
+  /* keyboard */
+
+
   render() {
-    const Titulo = 'B2B';
+    const Titulo = 'B2B'
     const noLeftView = true
+    const quitarPie = this.state.quitarPieState
+    if (quitarPie != false){
+      deletedPie = styleLogin.deletedPie
+    }else{
+      deletedPie = null
+    }
     return (
       <StyleProvider style={getTheme(material)}>
         <Drawer
@@ -44,6 +80,7 @@ export default class Login extends Component {
           <Root>
             <Container>
               <AppHeader openDrawer={this.openDrawer.bind(this)} Titulo={Titulo} noLeftView={noLeftView} styleLogin={styleLogin} />
+              <View style={[styles.screenLogin]}>
               <View style={[styles.espaceLogin]} />
               <Form style={[styles.formIniciar]} >
                 <Item floatingLabel last style={[styles.itemLogin]} >
@@ -61,12 +98,14 @@ export default class Login extends Component {
                 </Button>
               </Form>
               <View style={[styles.espaceLogin]} />
-              <View style={{borderBottomWidth: 1,borderBottomColor: '#ddd',margin:15, marginTop: 30,}} />
-              <TouchableNativeFeedback style={[styles.gestionLogin]} onPress={() => {this.setModalVisible(true);}}>
-                <Text style={[styles.gestionTextLogin]}>
-                    Gestiona tu acceso <Text style={{color: '#D80212'}}>aquí.</Text>
-                </Text>
-              </TouchableNativeFeedback>
+              <View style={[styles.pieLoginGestionUser]}  onSubmitEditing={Keyboard.dismiss} >
+                <View style={{borderBottomWidth: 1,borderBottomColor: '#ddd',margin:15, marginTop: 30,}} />
+                <TouchableNativeFeedback style={[styles.gestionLogin]} onPress={() => {this.setModalVisible(true);}}>
+                  <Text style={[styles.gestionTextLogin]}>
+                      Gestiona tu acceso <Text style={{color: '#D80212'}}>aquí.</Text>
+                  </Text>
+                </TouchableNativeFeedback>
+              </View>
 
 
               <Modal
@@ -97,6 +136,7 @@ export default class Login extends Component {
               </Modal>
 
               
+              </View>
             </Container>
           </Root>
         </Drawer>
@@ -112,6 +152,9 @@ const styleLogin = StyleSheet.create({
   bodyH:{
     flex: 4,
     alignItems: 'center',
+  },
+  deletedPie:{
+    display: 'none',
   },
 });
 

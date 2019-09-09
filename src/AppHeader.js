@@ -24,9 +24,9 @@ export default class AppHeader extends Component {
             <Title>{Titulo}</Title>
             </Body>
             <Right style={[styleLogin.rightBtn]}>
-            <Button transparent onPress={()=> this.props.openDrawer()}>
-                <Icon name='menu' />
-            </Button>
+              <Button transparent onPress={()=> this.props.openDrawer()}>
+                  <Icon name='menu' />
+              </Button>
             </Right>
         </Header>
     );

@@ -1,5 +1,17 @@
 export default{
+    /* APPFOOTER */
+    iconFA: {
+        color: '#fff',
+        fontSize: 24,
+    },
+    iconActive: {
+        color: '#fff',
+    },
     /* LOGIN */
+    screenLogin:{
+        flex: 1,
+        resizeMode: 'cover',
+    },
     rightBtn: {
         display: 'flex',
     },
@@ -21,8 +33,8 @@ export default{
     },
     formIniciar:{
         flex: 2,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 16,
+        paddingRight: 16,
     },
     itemLogin:{
     },
@@ -39,6 +51,9 @@ export default{
     espaceLogin:{
         flex: 1,
     },
+    pieLoginGestionUser:{
+        flex: 1,
+    },
     gestionLogin: {
         flex: 1,
         alignSelf: 'center',
@@ -48,13 +63,13 @@ export default{
     gestionTextLogin:{
         padding: 10,
         textAlign: 'center',
-        marginBottom: 15,
+        marginBottom: 16,
     },
     /* PERFIL */
     perfilView:{
         paddingTop: 35,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 16,
+        paddingRight: 16,
         paddingBottom: 0,
         alignItems: 'center',
         flex: 1,
@@ -86,12 +101,191 @@ export default{
         fontWeight: 'bold',
     },
     /* HOME */
+    segmentsFilters:{
+        paddingTop: 10,
+        borderRadius: 10,
+        overflow: 'hidden',
+        width: '100%',
+    },
+    btnSegmen:{
+    
+    },
     formFilterHome:{
-        padding: 15,
-        paddingTop: 35,
+        padding: 16,
         flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    searchBarH: {
+        borderColor: '#7e7e7d',
+        borderWidth: 1,
+        borderRadius: 10,
+        paddingLeft: 5,
+        paddingRight: 5,
+        flex: 6,
+    },
+    searchBarHIcon:{
+        color: '#7e7e7d',
+        fontSize: 20,
+        marginRight: 5,
+    },
+    btnBoxFilter: {
+        marginLeft: 10,
+        flex: 1,
+    },
+    btnFilter:{
+        borderRadius: 10,
+        padding: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    iconFilterH:{
+        marginLeft: 0,
+        marginRight: 0,
+    },
+    textBtnSegmen: {
+        textTransform: 'capitalize',
+        fontSize: 16,
+            paddingLeft: 20,
+            paddingRight: 20,
+    },
+    btnSegmenFirstHome:{
+        borderTopLeftRadius: 5, 
+        borderBottomLeftRadius: 5,
+        borderLeftColor: '#D80212',
+        borderTopColor: '#D80212',
+        borderBottomColor: '#D80212',
+    },
+    btnSegmenLastHome:{
+        borderTopRightRadius: 5,
+        borderBottomRightRadius: 5,
+    },
+    formFilterHomeView:{
+        padding: 10,
+    },
+    formFilterHomeItem:{
     },
     formFilterHomeBtn:{
+    },
+    containerEmpresasList:{
+        paddingLeft: 16,
+        paddingRight: 16,
+    },
+    cartEmpresas:{
+        borderRadius: 10,
+        overflow: 'hidden',
+    },
+    cartItemNamesEmpresas:{
+        paddingBottom: 5,
+        paddingTop: 5,
+    },
+    textNamesEmpresas:{
+        fontWeight: 'bold',
+        fontSize: 16,
+    },
+    cartItemDatesEmpresas:{
+        paddingBottom: 4,
+        paddingTop: 4,
+        justifyContent: 'space-between',
+    },
+    textDatesEmpresas:{},
+    cartItemDatesEmpresasBoxSectorBadge:{
+        flexDirection: 'row',
+    },
+    empresaTouch:{
+        width: '100%',
+        backgroundColor: '#98c',
+    },
+    /* RESULTADOS */
+    circulSector: {
+        margin: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 27,
+        width: 27,
+    },
+    textcirculSector:{
+        color: '#fff',
+        fontSize: 12,
+        paddingBottom: 0,
+        paddingTop: 0,
+    },
+    /* FICHA */
+    containerFicha:{
+        flex: 1,
+    },
+    contentFicha:{
+    },
+    formFicha: {
+        padding: 16,
+    },
+    listFicha: {
+        paddingLeft: 0,
+        borderBottomWidth: 1,
+        borderBottomColor: '#7e7e7d',
+    },
+    listItemFicha:{
+        borderBottomWidth: 0,
+        borderBottomColor: undefined,
+        marginLeft: 0,
+    },
+    listItemFichaContac:{
+        paddingTop: 20,
+        borderBottomWidth: 0,
+    },
+    itemBodyFicha:{
+        
+    },
+    tittleFicha:{
+        color: '#D80212',
+        marginLeft: 0,
+        fontWeight: 'bold',
+    },
+    dateFicha:{
+        color: '#7e7e7d',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 0,
+    },
+    btnPickProductsFicha:{
+        borderColor: '#7e7e7d',
+        height: 35,
+    },
+    btnListFicha: {
+        textTransform: 'capitalize',
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    dateBtnListFichaSectores:{
+        
+    },
+    dateBtnListFichaProducts:{
+        
+    },
+    boxBtnLocationFicha:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: 16,
+    },
+    btnAddLocationFicha:{
+        height: 35,
 
+    },
+    textBtnAddLocationFicha:{
+        textTransform: 'capitalize',
+        color: '#D80212',
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    btnVerLocationFicha:{
+        height: 35,
+
+    },
+    textBtnVerLocationFicha:{
+        textTransform: 'capitalize',
+        color: '#fff',
+        paddingLeft: 10,
+        paddingRight: 10,
     },
 }

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { Container, Drawer, StyleProvider, Root, Text, View, Content, Card, CardItem, Body, Header, Item, Icon, Input, Button, Right, Segment, Picker, Form } from 'native-base';
+import { Container, Drawer, StyleProvider, Root, Text, View, Content, Card, CardItem, Body, Header, Item, Icon, Input, Button, Left, Right, Segment, Picker, Form, Title, Badge } from 'native-base';
 import styles from './Style.js';
+import IconF from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../native-base-theme/components';
 import material from '../native-base-theme/variables/material';
 import SideBar from './SideBar';
-import AppHeader from './AppHeader';
+import AppFooter from './AppFooter';
+import EmpresaHList from './EmpresaHList';
 
 export default class Home extends Component {
   
@@ -28,79 +30,80 @@ export default class Home extends Component {
   }
 
   render() {
-    const Titulo = 'Home';
+    const Titulo = 'Exportadores';
     const noLeftView = false
-    const styleLogin = styles
     return (
       <StyleProvider style={getTheme(material)}>
         <Drawer
-          side = "right"
           ref={(ref) => { this.drawer = ref; }}
           content={<SideBar navigator={this._navigator} />}
           onClose={() => this.closeDrawer()}
         >
           <Root>
             <Container>
-              <Header searchBar rounded hasSegment>
-                <Item style={{flex: 6,}}>
-                  <Icon name="ios-search" />
-                  <Input placeholder="Search" />
-                </Item>
-                <Right style={{flex: 1,}}>
+              <Header hasSegment>
+                <Left>
                   <Button transparent onPress={()=> this.openDrawer()}>
                       <Icon name='menu' />
                   </Button>
-                </Right>
+                </Left>
+                <Body>
+                  <Title>{Titulo}</Title>
+                </Body>
+                <Right></Right>
               </Header>
-              <Segment>
+              <Segment style={[styles.segmentsFilters]}>
                 {/* <Icon name='options' /> */}
-                <Button first>
-                  <Text>Empresa</Text>
+                <Button first active style={[styles.btnSegmen ,styles.btnSegmenFirstHome]}>
+                  <Text style={[styles.textBtnSegmen]}>Empresa</Text>
                 </Button>
-                <Button>
-                  <Text>Producto</Text>
+                <Button style={[styles.btnSegmen]}>
+                  <Text style={[styles.textBtnSegmen]}>Producto</Text>
                 </Button>
-                <Button last active>
-                  <Text>Ciudad</Text>
+                <Button last  style={[styles.btnSegmen ,styles.btnSegmenLastHome]}>
+                  <Text style={[styles.textBtnSegmen]}>Ciudad</Text>
                 </Button>
+
               </Segment>
               <Content >
                 <Form style={[styles.formFilterHome]} >
-                  <Button last active style={[styles.formFilterHomeBtn]} >
-                    <Text>Filtros</Text>
+                  <View style={[styles.searchBarH]}>
+                    <Item style={{borderBottomWidth: 0,}}>
+                      <Input style={{height: 40, paddingTop: 0, paddingBottom: 0,}} placeholder="Busca Empresas Exportadoras" />
+                      <IconF style={[styles.searchBarHIcon]} name="search" />
+                    </Item>
+                  </View>
+                  <View style={[styles.btnBoxFilter]}>
+                    <Button style={[styles.btnFilter]}>
+                      <Icon style={[styles.iconFilterH]} type="FontAwesome" name="sliders" />
+                    </Button>
+                  </View>
+                  
+                 {/*  <Button style={[styles.formFilterHomeBtn]} >
+                    <Icon type="FontAwesome" name="sliders" />
+                    <Picker
+                      mode="dropdown"
+                      placeholder="Select your SIM"
+                      itemStyle={{
+                        marginLeft: 0,
+                        paddingLeft: 10
+                      }}
+                      style={{ width: undefined }}
+                      selectedValue={this.state.selected}
+                      onValueChange={this.onValueChange.bind(this)}
+                    >
+                      <Picker.Item label="Agronegocios" value="key1" />
+                      <Picker.Item label="Exportación de servicios" value="key2" />
+                      <Picker.Item label="Insdustria de la vestimenta y decoración" value="key3" />
+                      <Picker.Item label="Manufacturas diversas" value="key4" />
+                      <Picker.Item label="Productos Pesqueros" value="key5" />
+                    </Picker>
                   </Button>
-                  <Picker
-                    mode="dropdown"
-                    placeholder="Select your SIM"
-                    iosIcon={<Icon name="arrow-down" />}
-                    placeholder="Select your SIM"
-                    textStyle={{ color: "#5cb85c" }}
-                    itemStyle={{
-                      backgroundColor: "#d3d3d3",
-                      marginLeft: 0,
-                      paddingLeft: 10
-                    }}
-                    itemTextStyle={{ color: '#788ad2' }}
-                    style = {
-                      {
-                        width: '45%',
-                        backgroundColor: '#D80212',
-                        textAlign: 'center',
-                        color:'#fff',
-                      }
-                    }
-                    selectedValue={this.state.selected}
-                    onValueChange={this.onValueChange.bind(this)}
-                  >
-                    <Picker.Item label="Sector" value="key0" />
-                    <Picker.Item label="Agronegocios" value="key1" />
-                    <Picker.Item label="Exportación de servicios" value="key2" />
-                    <Picker.Item label="Insdustria de la vestimenta y decoración" value="key3" />
-                    <Picker.Item label="Manufacturas diversas" value="key4" />
-                    <Picker.Item label="Productos Pesqueros" value="key5" />
-                  </Picker>
-                </Form>
+                 */}</Form>
+                <View style={{borderBottomWidth: 1,borderBottomColor: '#ddd',margin:15,}} />
+                <EmpresaHList />
               </Content>
+              <AppFooter/>
             </Container>
           </Root>
         </Drawer>

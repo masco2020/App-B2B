@@ -157,12 +157,12 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: '#D80212',
+  footerDefaultBg: '#7e7d7d',
   footerPaddingBottom: 0,
 
   // FooterTab
-  tabBarTextColor: '#bfc6ea',
-  tabBarTextSize: 11,
+  tabBarTextColor: '#fff',
+  tabBarTextSize: 12,
   activeTab: '#fff',
   sTabBarActiveTextColor: '#007aff',
   tabBarActiveTextColor: '#fff',
@@ -238,12 +238,12 @@ export default {
   },
 
   // Segment
-  segmentBackgroundColor: '#D80212',
-  segmentActiveBackgroundColor: '#fff',
-  segmentTextColor: '#fff',
-  segmentActiveTextColor: '#D80212',
-  segmentBorderColor: '#fff',
-  segmentBorderColorMain: '#D80212',
+  segmentBackgroundColor: undefined,
+  segmentActiveBackgroundColor: '#D80212',
+  segmentTextColor: '#7e7e7d',
+  segmentActiveTextColor: '#fff',
+  segmentBorderColor: '#7e7e7d',
+  segmentBorderColorMain: '#fff',
 
   // Spinner
   defaultSpinnerColor: '#45D56E',
