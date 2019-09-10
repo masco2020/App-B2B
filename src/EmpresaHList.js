@@ -36,12 +36,6 @@ export default class EmpresaHList extends Component {
                         {
                             idSector: 1, nombre: 'Agronegocios', color: '#86BA24', letra:'A',
                             listaProducto:[
-                                //1 Productos Alimenticios / Alimentos y Bebidas - Orgánicos
-                                //2 Alimentos congelados
-                                //3 Alimentos funcionales
-                                //4 Alimentos procesados en conservas
-                                //5 Bebidas Alcohólicas
-                                //6 Bebidas no alcohólicas
                                 {
                                     idProducto: 1, nombre: 'Productos Alimenticios / Alimentos y Bebidas - Orgánicos',
                                 },
@@ -56,15 +50,6 @@ export default class EmpresaHList extends Component {
                         {
                             idSector: 4, nombre: 'Manufacturas diversas', color: '#FFCC21', letra:'M',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
                                     idProducto: 1, nombre: 'Autopartes',
                                 },
@@ -92,37 +77,20 @@ export default class EmpresaHList extends Component {
                         {
                             idSector: 2, nombre: 'Exportación de Servicios', color: '#E00613', letra:'S',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
-                                    idProducto: 1, nombre: 'Autopartes',
+                                    idProducto: 3, nombre: 'BPO - Centros de Contacto y Cobranza',
                                 },
                                 {
-                                    idProducto: 2, nombre: 'Colorantes Naturales',
+                                    idProducto: 4, nombre: 'Construcción',
                                 },
                                 {
-                                    idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
+                                    idProducto: 5, nombre: 'Consultoría en Ingeniería',
                                 },
+                            ]
                         }, 
                         {
                             idSector: 3, nombre: 'Industria de la vestimenta y decoración', color: '#A0137B', letra:'I',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
                                     idProducto: 1, nombre: 'Autopartes',
                                 },
@@ -132,19 +100,11 @@ export default class EmpresaHList extends Component {
                                 {
                                     idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
                                 },
+                            ]
                         },
                         {
                             idSector: 4, nombre: 'Manufacturas diversas', color: '#FFCC21', letra:'M',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
                                     idProducto: 1, nombre: 'Autopartes',
                                 },
@@ -154,6 +114,7 @@ export default class EmpresaHList extends Component {
                                 {
                                     idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
                                 },
+                            ]
                         },
                     ]
                 },
@@ -171,37 +132,20 @@ export default class EmpresaHList extends Component {
                         {
                             idSector: 1, nombre: 'Agronegocios', color: '#86BA24', letra:'A',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
-                                    idProducto: 1, nombre: 'Autopartes',
+                                    idProducto: 1, nombre: 'Productos Alimenticios / Alimentos y Bebidas - Orgánicos',
                                 },
                                 {
-                                    idProducto: 2, nombre: 'Colorantes Naturales',
+                                    idProducto: 2, nombre: 'Alimentos congelados',
                                 },
                                 {
-                                    idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
+                                    idProducto: 3, nombre: 'Alimentos funcionales',
                                 },
+                            ]
                         },
                         {
                             idSector: 5, nombre: 'Productos Pesqueros', color: '#0071B8', letra:'P',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
                                     idProducto: 1, nombre: 'Autopartes',
                                 },
@@ -211,6 +155,7 @@ export default class EmpresaHList extends Component {
                                 {
                                     idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
                                 },
+                            ]
                         },
                     ]
                 },
@@ -228,15 +173,6 @@ export default class EmpresaHList extends Component {
                         {
                             idSector: 3, nombre: 'Industria de la vestimenta y decoración', color: '#A0137B', letra:'I',
                             listaProducto:[
-                                //1 Autopartes
-                                //2 Colorantes Naturales
-                                //3 Cosméticos & Ingredientes Naturales
-                                //4 Envases y Embalajes
-                                //5 Equipamiento para la Industria Alimentaria
-                                //6 Equipamiento y Material Médico
-                                //7 Línea Eléctrica
-                                //8 Manufacturas de Madera
-
                                 {
                                     idProducto: 1, nombre: 'Autopartes',
                                 },
@@ -246,6 +182,7 @@ export default class EmpresaHList extends Component {
                                 {
                                     idProducto: 3, nombre: 'Cosméticos & Ingredientes Naturales',
                                 },
+                            ]
                         },
                     ]
                 },
